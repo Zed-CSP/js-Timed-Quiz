@@ -220,3 +220,53 @@ function getHighScores() {
     localStorage.setItem('highScoresArray', JSON.stringify(highScoresArray));
 
 }
+
+function displayHighScores() {
+    console.log('displayHighScores');
+    document.getElementById('header').classList.add('hide');
+    document.getElementById('submit').classList.add('hide');
+    document.getElementById('input').classList.add('hide');
+    document.getElementById('restart').classList.remove('hide');
+    document.getElementById('highScores').classList.remove('hide');
+    document.getElementById('highScores').innerHTML = '';
+
+    const nameTitleDiv = document.createElement('div');
+    nameTitleDiv.textContent = 'NAME:';
+    document.getElementById('highScores').appendChild(nameTitleDiv);
+
+    const scoreTitleDiv = document.createElement('div');
+    scoreTitleDiv.textContent = 'SCORE:';
+    document.getElementById('highScores').appendChild(scoreTitleDiv);
+
+    const timeTitleDiv = document.createElement('div');
+    timeTitleDiv.textContent = 'TIME:';
+    document.getElementById('highScores').appendChild(timeTitleDiv);
+
+    for (let i = 0; i < highScoresArray.length; i++) {
+        const nameDiv = document.createElement('div');
+        const scoreDiv = document.createElement('div');
+        const timeDiv = document.createElement('div');
+
+        nameDiv.textContent = highScoresArray[i].name;
+        scoreDiv.textContent = highScoresArray[i].score;
+        timeDiv.textContent = highScoresArray[i].time;
+
+        document.getElementById('highScores').appendChild(nameDiv);
+        document.getElementById('highScores').appendChild(scoreDiv);
+        document.getElementById('highScores').appendChild(timeDiv);
+
+        if (i === 0) {
+            nameDiv.classList.add('first');
+            scoreDiv.classList.add('first');
+            timeDiv.classList.add('first');
+        } else if (i === 1) {
+            nameDiv.classList.add('second');
+            scoreDiv.classList.add('second');
+            timeDiv.classList.add('second');
+        } else if (i === 2) {
+            nameDiv.classList.add('third');
+            scoreDiv.classList.add('third');
+            timeDiv.classList.add('third');
+        }
+    }
+}
