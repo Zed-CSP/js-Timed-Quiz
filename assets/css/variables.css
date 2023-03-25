@@ -1,0 +1,5 @@
+:root {
+    --hue-wrong: #f00;
+    --hue-correct: #0f0;
+    --hue-neutral: rgba(12, 77, 147, 0.887);
+}
