@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed Quiz Web App</title>
+    <!--link to css files-->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--attempting to use defer to load the script files in order-->
+    <script defer src="assets/js/library.js"></script>
+    <script defer src="assets/js/variables.js"></script>
+    <script defer src="assets/js/objects.js"></script>
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <!--header div-->
+    <div id="header" class="header">
+        <h1 class = "line1">Timed Quiz</h1>
+        <p class = "line2">Test your knowledge of JavaScript!</p>
+    </div>
+    <!--body container-->
+    <div class="container">
+
+        <!--timer div-->
+        <div id="timer" class="timer top-left hide">Time Remaining: 100</div>
+        <!--score div-->
+        <div id="score" class="score top-right hide">Score: 0</div>
+
+        <!--question container-->
+        <div id="quiz-container" class="hide">
+            <div id="question" class="hide">Question</div>
+            <!--answer controls div-->
+            <div id="answers" class="btn-grid hide">
+                <button id="A" class="btn">Answer 1</button>
+                <button id="B" class="btn">Answer 2</button>
+                <button id="C" class="btn">Answer 3</button>
+                <button id="D" class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div id="highScores" class="highScore-grid hide">
+
+        </div>
+        <!--input div-->
+        <div id="input" class="hide">
+            <input id="userName" type="text" placeholder="Enter Name">
+        </div>
+            <!--game controls div-->
+        <div id="controls" class="controls">
+            <button id="start" class="start-btn btn">Start Quiz</button>
+            <button id="next" class="next-btn btn hide">Next</button>
+            <button id="submit" class="submit-btn btn hide">Submit</button>
+            <button id="restart" class="restart-btn btn hide">Restart</button>
+        </div>
+        
+
+    </div>
+    
+
+</html>
