@@ -164,3 +164,25 @@ function resetState() {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
 }
+
+function timer() {
+    // counts down from 100 seconds, stops when time is up or all questions are answered
+    var timerId = setInterval(countdown, 1000);
+    
+    function countdown() {
+        if (gameON === false) {
+            return timeLeft
+        } else if (timeLeft <= 0) {
+            gameON = false;
+            clearTimeout(timerId);
+            getScore();
+            endGame();
+            return timeLeft
+        } else {
+            timeLeftElement.innerHTML = 'Time Remaining ' + timeLeft;
+            timeLeft--;
+            getScore();
+            return timeLeft
+        }
+    }
+}
