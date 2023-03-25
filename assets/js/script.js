@@ -107,3 +107,33 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
     })    
 }
+
+function selectAnswer(event) {
+    const selectedButton = event.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    // if the answer is correct, the score will increase by 1
+    if (correct) {  
+        playerScore++
+        console.log("correct! " + score)
+        headerElements.classList.remove('hide')
+        headerElements.innerText = "Correct!"
+    } else if (!correct) {
+        // if the answer is incorrect, the timer will decrease by 10 seconds
+        timeLeft -= 10
+        console.log("wrong! " + timeLeft)
+        headerElements.classList.remove('hide')
+        headerElements.innerText = "Wrong!"
+    } else {
+        console.log("error")
+    }
+    // if all questions are answered, the game will end
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        endGame()
+    }
+}
