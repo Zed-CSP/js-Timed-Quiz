@@ -202,3 +202,21 @@ function endGame() {
     scoreElement.innerHTML = playerResults.message;
    
 }
+
+function getHighScores() {
+    console.log('getHighScores');
+    playerResults.updateName();
+    highScoresArray = JSON.parse(localStorage.getItem('highScoresArray'));
+    if (highScoresArray === null) {
+        highScoresArray = [];
+    }
+    highScoresArray.push(playerResults);
+    if (highScoresArray.length > 1) {
+        highScoresArray.sort((a, b) => b.score - a.score || b.time - a.time);
+    }
+    if (highScoresArray.length > 10) {
+        highScoresArray.pop();
+    }
+    localStorage.setItem('highScoresArray', JSON.stringify(highScoresArray));
+
+}
