@@ -69,3 +69,8 @@ function startGame() {
     scoreElement.classList.remove('hide')
     setNextQuestion()
 }
+
+function submit() {
+    getHighScores()
+    displayHighScores()
+}
