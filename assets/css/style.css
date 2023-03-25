@@ -1,0 +1,176 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  
+  body {
+      --hue: var(--hue-neutral);
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--hue);
+  }
+  
+  .header {
+      position: absolute;
+      width: 100%;
+      top: 5%;
+      background-color: antiquewhite;
+      padding: 1rem;
+      text-align: center;
+  }
+  
+  h1 {
+      font-size: 5rem;
+      font-weight: bold;
+      margin: 10px;
+      padding: 0;
+  }
+  
+  .header p {
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      padding: 0;
+  }
+  
+  #userName {
+      font-size: 2rem;
+      width: 100%;
+      font-weight: bold;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+      outline: none;
+  }
+  
+  body.wrong {
+      --hue: var(--hue-wrong);
+  }
+  
+  body.correct {
+      --hue: var(--hue-correct);
+  }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 800px;
+      max-width: 80%;
+      min-height: 30%;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: antiquewhite;
+      padding: 10px;
+      border-radius: 0 0 10px 0;
+      font-size: 2rem;
+  
+  }
+  
+  .top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: antiquewhite;
+      border-radius: 0 0 0 10px ;
+      font-size: 2rem;
+  }
+  
+  .timer, .score {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 10px;
+  }
+  
+  .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+      margin: 25px 0;
+  }
+  
+  .highScore-grid {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 10px;
+      margin: 25px 0;
+  }
+  
+  .btn {
+      --hue: var(--hue-neutral);
+      border: 1px solid var(--hue);
+      background-color: var(--hue);
+      border-radius: 8px;
+      padding: 5px 10px;
+      color: white;
+      outline: none;
+      font-size: 1.5rem;
+  }
+  
+  .btn:hover {
+      cursor: pointer;
+      border-color: black;
+      box-shadow: black 0 0 3px 3px;
+  }
+  
+  .btn.correct {
+      --hue: var(--hue-correct);
+      color: black;
+  }
+  
+  .btn.wrong {
+      --hue: var(--hue-wrong);
+  }
+  
+  .start-btn, .next-btn {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 10px 20px;
+  }
+  
+  .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .hide {
+      display: none;
+  }
+  
+  .first {
+      color: gold;
+      text-shadow: black 0 0 3px;
+    }
+    
+    .second {
+      color: silver;
+      text-shadow: black 0 0 3px;
+    }
+    
+    .third {
+      color: #cd7f32;
+      text-shadow: black 0 0 3px;
+    }
+    
+  
+  
