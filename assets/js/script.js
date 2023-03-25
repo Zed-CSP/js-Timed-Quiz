@@ -82,3 +82,9 @@ function getScore() {
         console.log('getScore error')
     }
 }
+
+function setNextQuestion(gameON) {
+    console.log('function setNextQuestion')
+    resetState()
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+}
