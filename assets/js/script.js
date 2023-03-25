@@ -137,3 +137,13 @@ function selectAnswer(event) {
         endGame()
     }
 }
+
+function setStatusClass(element, correct) {
+    // changes hues of buttons
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
