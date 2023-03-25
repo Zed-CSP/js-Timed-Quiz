@@ -42,3 +42,30 @@ restartButton.addEventListener('click', () => {
     clearHighScores()
     restartGame()
 })
+
+// ***************
+// functions
+// ***************
+function startGame() {
+    //starts the game when button is pressed
+    playerResults.Reset();
+    timeLeft = 100;
+    currentQuestionIndex = 0;
+    playerScore = 0;
+    gameON = true;
+    console.log('function startedGame')
+    startButton.classList.add('hide')
+    headerElements.classList.add('hide')
+    //starts timer function
+    timer()
+    // shuffles questions returns value above or below 0
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    // sets current question index to 0
+    currentQuestionIndex = 0
+    questionElement.classList.remove('hide')
+    answerButtonsElement.classList.remove('hide')
+    questionContainerElement.classList.remove('hide')
+    timeLeftElement.classList.remove('hide')
+    scoreElement.classList.remove('hide')
+    setNextQuestion()
+}
