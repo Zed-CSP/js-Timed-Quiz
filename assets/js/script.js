@@ -147,3 +147,9 @@ function setStatusClass(element, correct) {
         element.classList.add('wrong')
     }
 }
+
+function clearStatusClass(element) {
+    // removes hues of buttons
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
