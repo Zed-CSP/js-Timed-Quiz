@@ -270,3 +270,21 @@ function displayHighScores() {
         }
     }
 }
+
+function clearHighScores() {
+    console.log('clearHighScores');
+    document.getElementById('highScores').innerHTML = '';
+}
+
+function restartGame() {
+    console.log('restartGame');
+    document.getElementById('score').classList.add('top-right');
+    document.getElementById('restart').classList.add('hide');
+    document.getElementById('highScores').classList.add('hide');
+    document.getElementById('timer').classList.remove('hide');
+    document.getElementById('header').classList.add('hide');
+    startGame();
+}
+
+
+
