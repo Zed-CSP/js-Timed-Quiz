@@ -74,3 +74,11 @@ function submit() {
     getHighScores()
     displayHighScores()
 }
+
+function getScore() {
+    if (gameON) {
+        scoreElement.innerHTML = "Score: " + playerScore
+    } else {
+        console.log('getScore error')
+    }
+}
