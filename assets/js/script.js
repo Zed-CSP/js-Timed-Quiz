@@ -153,3 +153,14 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
+function resetState() {
+    // resets state of buttons
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    headerElements.classList.add('hide')
+    //while operates as long as the condition is true, so it will keep removing the first child until there are no more children
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    }
+}
