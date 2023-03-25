@@ -186,3 +186,19 @@ function timer() {
         }
     }
 }
+
+function endGame() {
+    // do something when time is up
+    gameON = false;
+    console.log("endGame");
+    questionContainerElement.classList.add('hide');
+    document.getElementById('score').classList.remove('top-right');
+    document.getElementById('next').classList.add('hide');
+    document.getElementById('timer').classList.add('hide');
+    document.getElementById('submit').classList.remove('hide');
+    document.getElementById('input').classList.remove('hide');
+    playerResults.update(playerScore, timeLeft);
+    console.log(playerResults);
+    scoreElement.innerHTML = playerResults.message;
+   
+}
