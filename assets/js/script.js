@@ -88,3 +88,22 @@ function setNextQuestion(gameON) {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+
+function showQuestion(question) {
+    console.log('function showQuestion')
+    console.log(question)
+    // displays question
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        // only sets "correct" value if answer is correct, this is because it will return a string if true and not a boolean
+        if (answer.correct) {
+            console.log('correct answer set')
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerButtonsElement.appendChild(button)
+    })    
+}
