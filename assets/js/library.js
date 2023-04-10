@@ -100,6 +100,5 @@ const questions = [
             {text: "top(x, y)", correct: false},
             {text: "ceil(x, y)", correct: false},
         ]
-    }
-
+    },
 ]

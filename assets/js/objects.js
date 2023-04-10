@@ -19,7 +19,6 @@ var playerResults = {
         this.checkHighestScore();
         this.messageTree();
         setStatusClass(document.body, this.pass);
-
     },
     checkPass: function() {
         console.log("checkPass")

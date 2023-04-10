@@ -2,12 +2,6 @@
 // ******** Quiz App *********
 // ***************************
 
-
-// ***************
-// variables
-// ***************
-var highScoresArray = [];
-
 // ***************
 // DOM elements
 // ***************
@@ -167,7 +161,7 @@ function resetState() {
 
 function timer() {
     // counts down from 100 seconds, stops when time is up or all questions are answered
-    var timerId = setInterval(countdown, 1000);
+    let timerId = setInterval(countdown, 1000);
     
     function countdown() {
         if (gameON === false) {
@@ -285,6 +279,3 @@ function restartGame() {
     document.getElementById('header').classList.add('hide');
     startGame();
 }
-
-
-
